@@ -1,18 +1,20 @@
 import type { Scene } from "../types";
 import { n, say } from "./helpers";
 
-/** Day 1 share reactions + end of day (d1s_* 〜 d1e3) */
+/** Day 1 share reactions + end of day (d1s_* 〜 d1e3)
+ * ライトノベル風・感情を仕草で見せる版
+ */
 export const DAY1_SCENES: Scene[] = [
   n(
     "d1s_hina",
-    "陽菜が、選んだ言葉を指でなぞった。",
+    "陽菜が、選んだ言葉を指でゆっくりなぞった。指先が、少しだけ止まっている。",
     { bg: "club", music: "club", sprites: { hina: "idle" } },
   ),
   say(
     "d1s_hina2",
     "hina",
     "雨宮 陽菜",
-    "あはは、日常多めだね。でも『今日』って、たぶんそういう日だよ。特別より、残った端っこ。",
+    "あはは、日常多めだね。でも『今日』って、たぶんそういう日だよ。特別より、残った端っこのほう。",
     { sprites: { hina: "shy" } },
   ),
   say(
@@ -23,7 +25,7 @@ export const DAY1_SCENES: Scene[] = [
     { next: "d1e1" },
   ),
 
-  n("d1s_mei", "メイは腕を組んだまま、一度だけ顎を引いた。", {
+  n("d1s_mei", "メイは腕を組んだまま、一度だけ顎を引いた。勝ちを認めたときの仕草だ。", {
     bg: "club",
     music: "club",
     sprites: { mei: "idle" },
@@ -43,7 +45,7 @@ export const DAY1_SCENES: Scene[] = [
     { next: "d1e1" },
   ),
 
-  n("d1s_koto", "琴は眼鏡の位置を直し、言葉を一度、黙読した。", {
+  n("d1s_koto", "琴は眼鏡の位置を直し、言葉を一度、静かに黙読した。", {
     bg: "club",
     music: "club",
     sprites: { koto: "idle" },
@@ -63,7 +65,7 @@ export const DAY1_SCENES: Scene[] = [
     { next: "d1e1" },
   ),
 
-  n("d1s_rei", "零は本を開かず、表紙の端を親指で撫でた。", {
+  n("d1s_rei", "零は本を開かず、表紙の端を親指でゆっくり撫でた。", {
     bg: "club",
     music: "club",
     sprites: { rei: "idle" },
@@ -83,7 +85,7 @@ export const DAY1_SCENES: Scene[] = [
     { sprites: { rei: "serious" }, next: "d1e1" },
   ),
 
-  n("d1s_ayame", "しゆは『伸び代』と『友達』を、扇の骨に指で数えた。", {
+  n("d1s_ayame", "しゆは『伸び代』と『友達』を、扇の骨に指で一つずつ数えた。", {
     bg: "club",
     music: "club",
     sprites: { ayame: "shy" },
@@ -103,7 +105,7 @@ export const DAY1_SCENES: Scene[] = [
     { next: "d1e1" },
   ),
 
-  n("d1s_lumina", "ルミナは『光』と『白』を、後光の輪に指でなぞった。", {
+  n("d1s_lumina", "ルミナは『光』と『白』を、後光の輪に指でそっとなぞった。", {
     bg: "club",
     music: "club",
     sprites: { lumina: "shy" },
