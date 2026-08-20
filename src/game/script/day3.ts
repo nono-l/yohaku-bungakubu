@@ -1,7 +1,9 @@
 import type { Scene } from "../types";
 import { n, say } from "./helpers";
 
-/** Day 3: mysterious line, choices, poem, share reactions, night trigger */
+/** Day 3: mysterious line, choices, poem, share reactions, night trigger
+ * ライトノベル風・感情を仕草で見せる版
+ */
 export const DAY3_SCENES: Scene[] = [
   n(
     "d3a",
@@ -116,7 +118,7 @@ export const DAY3_SCENES: Scene[] = [
   ),
 
   // ---- Day3 share reactions ----
-  n("d3s_hina", "陽菜は『二階』と『チラシ』を何度も見た。", {
+  n("d3s_hina", "陽菜は『二階』と『チラシ』を何度も見た。指が、紙の端で少し止まっている。", {
     bg: "club",
     music: "dusk",
     sprites: { hina: "shy" },
@@ -128,7 +130,7 @@ export const DAY3_SCENES: Scene[] = [
     "余白が日常でも、いいよね。私は、そっちの担当でいたい。",
     { next: "night" },
   ),
-  n("d3s_mei", "メイは『一列』に丸をつけた。", {
+  n("d3s_mei", "メイは『一列』に、小さく丸をつけた。", {
     bg: "club",
     music: "dusk",
     sprites: { mei: "grin" },
@@ -140,7 +142,7 @@ export const DAY3_SCENES: Scene[] = [
     "余白でも勝負するんだ。いいね、新人。夜まで残る？",
     { next: "night" },
   ),
-  n("d3s_koto", "琴は『欄外』を、自分の部誌の端に書き写した。", {
+  n("d3s_koto", "琴は『欄外』を、自分の部誌の端に丁寧に書き写した。", {
     bg: "club",
     music: "dusk",
     sprites: { koto: "smile" },
@@ -176,7 +178,7 @@ export const DAY3_SCENES: Scene[] = [
     "余白、わたしの席だもん。夜まで残る？　残るよね。画面、消さないで。",
     { next: "night" },
   ),
-  n("d3s_ayame", "しゆは『これから』を、扇の要に書いた。", {
+  n("d3s_ayame", "しゆは『これから』を、扇の要に書いた。字が、少し震えている。", {
     bg: "club",
     music: "dusk",
     sprites: { ayame: "idle" },
@@ -188,7 +190,7 @@ export const DAY3_SCENES: Scene[] = [
     "余白が伸び代なら、自分、ここにいていい気がします。夜まで、残ります。",
     { next: "night" },
   ),
-  n("d3s_lumina", "ルミナは『純』を、後光の内側に置いた。", {
+  n("d3s_lumina", "ルミナは『純』を、後光の内側にそっと置いた。", {
     bg: "club",
     music: "margin",
     sprites: { lumina: "idle" },
