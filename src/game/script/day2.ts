@@ -1,14 +1,16 @@
 import type { Scene } from "../types";
 import { n, say } from "./helpers";
 
-/** Day 2: morning notice, guest (Monika), help choices, poem, share reactions, end */
+/** Day 2: morning notice, guest (Monika), help choices, poem, share reactions, end
+ * ライトノベル風・感情を仕草で見せる版
+ */
 export const DAY2_SCENES: Scene[] = [
   n(
     "d2a",
     "翌日。掲示板の『余白』の紙は、まだ右下が空いていた。誰も名前を書き足していない。",
     { bg: "hall", music: "dusk", sprites: {} },
   ),
-  n("d2b", "代わりに、鉛筆で一行。『きのうの十個、悪くなかった。——零』", { next: "guest1" }),
+  n("d2b", "代わりに、鉛筆で一行だけ。『きのうの十個、悪くなかった。——零』", { next: "guest1" }),
 
   // ---- Guest: Monika joins ----
   n(
@@ -41,7 +43,7 @@ export const DAY2_SCENES: Scene[] = [
     "guest5",
     "koto",
     "白鷺 琴",
-    "魔女の帽子と詩は、相性が良いという説があります。欄外に『客員』と記します。",
+    "魔女の帽子と詩は、相性が良いという説があります。欄外に『客員』と記しますね。",
     { sprites: { monika: "idle", hina: "idle", mei: "idle", koto: "smile" }, focus: "koto" },
   ),
   say(
@@ -105,7 +107,7 @@ export const DAY2_SCENES: Scene[] = [
     "助かる——！　紹介文、三日書いてる。『楽しいです』しか出てこないの、罪？",
     { bg: "club", music: "club", sprites: { hina: "shy" } },
   ),
-  n("d2_hina2", "画面には『楽しいです』が、本当に三行続いていた。"),
+  n("d2_hina2", "画面には『楽しいです』が、本当に三行続いていた。陽菜は魔法瓶の蓋を、無意識に回している。"),
   say(
     "d2_hina3",
     "hina",
@@ -115,7 +117,7 @@ export const DAY2_SCENES: Scene[] = [
   ),
   n(
     "d2_hina4",
-    "魔法瓶の蓋を指で回しながら、陽菜は笑ったまま目を伏せた。",
+    "蓋を回す手が、少しだけ止まった。",
     {
       choices: [
         { text: "案内がなければ、僕は来ていない", next: "d2_hina5", affection: { hina: 2 } },
@@ -138,7 +140,7 @@ export const DAY2_SCENES: Scene[] = [
     "見出しだけ見て。本文はまだ。本文は、見出しに負けたら捨てる主義。",
     { bg: "club", music: "club", sprites: { mei: "idle" } },
   ),
-  n("d2_mei2", "ノートに並ぶ候補。『一口で足りる』『負けない塩』『十個で勝負』"),
+  n("d2_mei2", "ノートに並ぶ候補。『一口で足りる』『負けない塩』『十個で勝負』。字が、少し力強い。"),
   say(
     "d2_mei3",
     "mei",
@@ -171,17 +173,17 @@ export const DAY2_SCENES: Scene[] = [
     "気をつけて開いてください。背表紙が、もう粉を吹いています。",
     { bg: "club", music: "club", sprites: { koto: "idle" } },
   ),
-  n("d2_koto2", "十年以上前の部誌。欄外に、鉛筆の名前が薄く残っている。"),
+  n("d2_koto2", "十年以上前の部誌。欄外に、鉛筆の名前が薄く残っている。琴の指が、その上で止まった。"),
   say(
     "d2_koto3",
     "koto",
     "白鷺 琴",
-    "本文は製本で残る。名前は、余白側にしかない。消しゴムは、本文より余白に厳しい。",
+    "本文は製本で残る。名前は、余白側にしかない。消しゴムは、本文より余白に厳しいんです。",
     { sprites: { koto: "idle" } },
   ),
   n(
     "d2_koto4",
-    "琴の指が、消された二文字の上で止まった。",
+    "消された二文字の上で、指が少し震えたように見えた。",
     {
       choices: [
         { text: "残っているほうを、一緒に写そう", next: "d2_koto5", affection: { koto: 2 } },
@@ -204,7 +206,7 @@ export const DAY2_SCENES: Scene[] = [
     "目次は、まだ空白が多い。意図的に。読み手が書き足すための頁を、先に確保してる。",
     { bg: "club", music: "club", sprites: { rei: "idle" } },
   ),
-  n("d2_rei2", "目次の後半は、項目名がなく、ページ番号だけが打ってある。"),
+  n("d2_rei2", "目次の後半は、項目名がなく、ページ番号だけが打ってある。空白が、静かに開いている。"),
   say(
     "d2_rei3",
     "rei",
@@ -270,7 +272,7 @@ export const DAY2_SCENES: Scene[] = [
     "見てください、成長記録。きのうは七語、きょうは八語。あと二語で十個に追いつきます。",
     { bg: "club", music: "club", sprites: { ayame: "idle" } },
   ),
-  n("d2_ayame2", "ノートの端に、亀の絵がひとつずつ増えていた。扇の隣で、とてもツヨイ字が震えている。"),
+  n("d2_ayame2", "ノートの端に、亀の絵がひとつずつ増えていた。扇の隣で、とてもツヨイ字が少し震えている。"),
   say(
     "d2_ayame3",
     "ayame",
@@ -351,7 +353,7 @@ export const DAY2_SCENES: Scene[] = [
   ),
 
   // ---- Day2 share reactions ----
-  n("d2s_hina", "陽菜は手紙、という語のあたりで息を止めた。", {
+  n("d2s_hina", "陽菜は『手紙』という語のあたりで、息を止めた。", {
     bg: "club",
     music: "club",
     sprites: { hina: "shy" },
@@ -363,7 +365,7 @@ export const DAY2_SCENES: Scene[] = [
     "宛先がなくても、隣、って書いてあると嬉しいな。私、隣担当でいいかも。",
     { next: "d2e1" },
   ),
-  n("d2s_mei", "メイが『短い』を二度叩いた。", {
+  n("d2s_mei", "メイが『短い』を二度、指で叩いた。", {
     bg: "club",
     music: "club",
     sprites: { mei: "grin" },
@@ -387,7 +389,7 @@ export const DAY2_SCENES: Scene[] = [
     "宛先が過去でも、手紙は届きます。今日の誰かは、もういない人かもしれません。",
     { next: "d2e1" },
   ),
-  n("d2s_rei", "零は『あなた』の一字を、指で隠した。", {
+  n("d2s_rei", "零は『あなた』の一字を、指でそっと隠した。", {
     bg: "club",
     music: "club",
     sprites: { rei: "serious" },
