@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #1a1612;
+  --color-ink-soft: #4a4036;
+  --color-paper: #f3ead8;
+  --color-paper-2: #e8dcc4;
+  --color-paper-3: #d9c9a8;
+  --color-navy: #1c2030;
+  --color-navy-2: #2a3148;
+  --color-indigo: #3d4a8a;
+  --color-indigo-soft: #6b78b5;
+  --color-gold: #b8892c;
+  --color-gold-soft: #d4b46a;
+  --color-plum: #6b3a6e;
+  --color-crimson: #a32638;
+  --color-amber: #c4922a;
+  --color-rei: #6b78b5;
+  --color-hina: #c4922a;
+  --color-mei: #c43b4a;
+  --color-koto: #8a5a8e;
+  --color-ayame: #7b62c4;
+  --color-lumina: #7eb6e8;
+  --font-serif: "Shippori Mincho", "Noto Serif JP", "Hiragino Mincho ProN", serif;
+  --font-sans: "Zen Kaku Gothic New", "Noto Sans JP", "Hiragino Sans", sans-serif;
+  --radius-sheet: 0.25rem;
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--color-navy);
+    color: var(--color-paper);
+  }
+}
+
+@keyframes type-caret {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes float-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hop {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes dust {
+  0% {
+    transform: translate3d(0, 20px, 0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.45;
+  }
+  100% {
+    transform: translate3d(12px, -80px, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-soft {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.paper-grain {
+  background-image:
+    radial-gradient(circle at 20% 10%, rgb(255 255 255 / 0.18), transparent 40%),
+    radial-gradient(circle at 80% 90%, rgb(80 50 20 / 0.08), transparent 45%);
+}
+
+.vn-shadow {
+  text-shadow: 0 1px 0 rgb(26 22 18 / 0.35), 0 8px 24px rgb(26 22 18 / 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

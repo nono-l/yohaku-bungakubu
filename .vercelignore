@@ -1,0 +1,7 @@
+node_modules
+.tanstack
+screenshots
+artifacts
+*.log
+scripts/play-*.mjs
+scripts/render-*.mjs
