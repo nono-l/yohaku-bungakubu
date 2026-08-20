@@ -1,6 +1,6 @@
 /**
  * Compatibility shim.
  * The full script has been modularized under ./script/
- * Explicit path avoids file-vs-directory resolution ambiguity.
+ * Existing imports (store.ts etc.) continue to work via this re-export.
  */
-export * from "./script/index";
+export * from "./script";

@@ -1,11 +1,6 @@
 /**
  * Assembled script index.
- * Modular split:
- * - helpers.ts
- * - prologue.ts
- * - day1.ts / day2.ts / day3.ts
- * - routes/*.ts
- * - utils.ts
+ * Modular structure under ./script/
  */
 
 import type { Scene } from "../types";
